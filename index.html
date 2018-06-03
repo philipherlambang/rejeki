@@ -244,7 +244,9 @@
 
         <p class="text-center small-padding text-white text-small">Segera Daftar dan Tebak Skor Pertandingan antara Perancis dan Australia. Tebak skor akan ditutup 5 menit sebelum pertandingan dimulai</p>
 
-        <a href="#" class="btn btn-primary button-yellow">Tebak Sekarang</a>
+        <button type="button" class="btn btn-primary button-yellow" data-toggle="modal" data-target=".popup-ball">
+          Tebak Sekarang
+        </button>
       </div>
     </div>
 
@@ -292,7 +294,9 @@
 
             <p class="text-center well-padding">Segera Daftar dan Tebak Skor Pertandingan antara Perancis dan Australia. Tebak skor akan ditutup 5 menit sebelum pertandingan dimulai</p>
 
-            <a href="#" class="btn btn-primary button-yellow">Tebak Sekarang</a>
+            <button type="button" class="btn btn-primary button-yellow" data-toggle="modal" data-target=".popup-ball">
+              Tebak Sekarang
+            </button>
             <div class="clearfix small-padding"></div>
           </div>
 
@@ -300,6 +304,146 @@
         <div class="col">
           <p class="text-center"><img src="images/flag-australia.png" width="200"></p>
           <p class="text-center">Australia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade popup-ball" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+
+          <div class="modal-body">
+
+            <div class="requestwizard hidden">
+              <div class="requestwizard-row setup-panel">
+                <div class="requestwizard-step">
+                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <p>Validasi</p>
+                    </div>
+                    <div class="requestwizard-step">
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p>Tebak Skor</p>
+                    </div>
+                    <div class="requestwizard-step">
+                        <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p>Thank you</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="step-1" class="setup-content">
+              <h1 class="text-oswald text-red text-uppercase text-center">Validasi Kupon</h1>
+              <div class="clearfix small-padding"></div>
+
+              <p class="text-center text-gray">Masukkan Kode i-kupon Anda</p>
+              <div class="clearfix"></div>
+              <div class="form-group">
+                <input type="email" class="form-control form-control-custom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="kode i-kupon">
+              </div>
+              <p class="text-center"><img src="images/recaptcha.png"></p>
+
+              <div class="modal-footer">
+                <p class="text-center">
+                  <button type="button" class="btn btn-primary button-red" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary button-yellow nextBtn">Submit</button>
+                </p>
+              </div>
+            </form>
+
+            <form id="step-2" class="setup-content">
+              <h1 class="text-oswald text-red text-uppercase text-center">Masukkan Skor Tebakan Anda</h1>
+              <div class="clearfix small-padding"></div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text-center"><img src="images/flag-france.png" width="120" /></p>
+                  <p class="text-center text-oswald">France</p>
+                  <div class="form-group">
+                    <input type="number" class="form-control form-control-custom-square" placeholder="0">
+                  </div>
+                </div>
+                <div class="col">
+                  <p class="text-center"><img src="images/flag-australia.png" width="120" /></p>
+                  <p class="text-center text-oswald">France</p>
+                  <div class="form-group">
+                    <input type="number" class="form-control form-control-custom-square" placeholder="0">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <p class="text-center">
+                  <button type="button" class="btn btn-primary button-red" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary button-yellow nextBtn">Submit</button>
+                </p>
+              </div>
+            </form>
+
+            <form id="step-3" class="setup-content">
+              <h1 class="text-oswald text-red text-uppercase text-center">Terima Kasih</h1>
+              <div class="clearfix small-padding"></div>
+
+              <p class="text-center text-gray">Terima kasih sudah menebak skor. Tebakan Anda sebagai berikut:</p>
+
+              <!-- tebakan 1 -->
+              <div class="row score-wrapper">
+                <div class="col">
+
+                  <div class="row">
+                    <div class="col">
+                      <p class="text-right"><img src="images/flag-france.png" width="90" /></p>
+                    </div>
+                    <div class="col text-center">
+                      <span class="text-oswald">1</span>
+                      <span class="text-oswald">-</span>
+                      <span class="text-oswald">0</span>
+                      <p class="text-small text-center d-none d-lg-block"><small>Waktu tebakan:</small> <br />Sabtu 16 Juni 2018 09.50 WIB</p>
+                    </div>
+                    <div class="col"><p class="text-left"><img src="images/flag-australia.png" width="90" /></p></div>
+
+                    <div class="col-12">
+                      <p class="text-small text-center d-md-none"><small>Waktu tebakan:</small> Sabtu 16 Juni 2018 09.50 WIB</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- tebakan 1 ends -->
+
+              <!-- tebakan 2 -->
+              <div class="row score-wrapper">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <p class="text-right"><img src="images/flag-france.png" width="90" /></p>
+                    </div>
+                    <div class="col text-center">
+                      <span class="text-oswald">1</span>
+                      <span class="text-oswald">-</span>
+                      <span class="text-oswald">1</span>
+                      <p class="text-small text-center d-none d-lg-block"><small>Waktu tebakan:</small> <br />Sabtu 16 Juni 2018 09.55 WIB</p>
+                    </div>
+                    <div class="col"><p class="text-left"><img src="images/flag-australia.png" width="90" /></p></div>
+
+                    <div class="col-12">
+                      <p class="text-small text-center d-md-none"><small>Waktu tebakan:</small> Sabtu 16 Juni 2018 09.50 WIB</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- tebakan 2 ends -->
+
+              <div class="modal-footer">
+                <p class="text-center">
+                  <button type="button" class="btn btn-primary button-red" data-dismiss="modal">Keluar</button>
+                  <button type="button" class="btn btn-primary button-yellow">Tebak Lagi</button>
+                </p>
+              </div>
+            </form>
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -465,6 +609,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/holder.min.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
