@@ -154,6 +154,124 @@
 }
 
 
+/*Medium devices (tablets, 768px and up)*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .banner-container{
+    margin-top: 85px;
+    padding: 20px;
+  }
+
+  .navbar-brand img{
+    display: none;
+  }
+
+  .navbar-nav li a{
+    font-size: 12px !important;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link{
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .nav-pills .nav-link.active{
+    background: none;
+    font-family: 'Oswald' !important;
+    color: #FACD3E;
+    text-transform: uppercase;
+    /*border-bottom*/: 1px solid #FACD3E;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 24px;
+  }
+
+  .nav-pills .nav-link{
+    margin-right: 20px;
+  }
+
+  .nav-pills .nav-link{
+    font-family: 'Oswald' !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 24px;
+  }
+
+  .form-control-underline{
+    margin-bottom: 20px !important;
+  }
+
+  .userlogin-container .mb-4{
+    margin-bottom: 15px !important;
+  }
+}
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .banner-container{
+    margin-top: 85px;
+    padding: 20px;
+  }
+
+  .navbar-brand img{
+    display: none;
+  }
+
+  .navbar-nav li a{
+    font-size: 12px !important;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link{
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .banner-container{
+    background-size: inherit !important;
+  }
+
+  .nav-pills .nav-link.active{
+    background: none;
+    font-family: 'Oswald' !important;
+    color: #FACD3E;
+    text-transform: uppercase;
+    /*border-bottom*/: 1px solid #FACD3E;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 24px;
+  }
+
+  .nav-pills .nav-link{
+    margin-right: 20px;
+  }
+
+  .nav-pills .nav-link{
+    font-family: 'Oswald' !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 24px;
+  }
+
+  .form-control-underline{
+    margin-bottom: 20px !important;
+  }
+
+  .userlogin-container .mb-4{
+    margin-bottom: 15px !important;
+  }
+}
+
+
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
   .navbar{
@@ -542,7 +660,7 @@ footer a{
 .form-control-custom-square{
   height: 80px !important;
   font-size: 36px;
-  line-height: 80px;
+  /*line-height: 80px;*/
   text-align: center;
   border: 1px solid #979797;
   width: 80px;
@@ -628,4 +746,13 @@ footer a{
 
 .mobile-modal-title{
   font-size: 22px;
+}
+
+.label-top{
+  font-size: 80%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+  color:#FACD3E;
+  padding-left: 0;
+  height: 30px;
 }
