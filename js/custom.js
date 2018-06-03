@@ -1,4 +1,30 @@
 $(document).ready(function () {
+    // label form underline
+    $( "#labelPhoneNumber" ).click(function() {
+        $( "#labelPhoneNumber").addClass('label-top');
+    });
+
+    $( "#labelPassword2" ).click(function() {
+        $( "#labelPassword").addClass('label-top');
+    });
+
+    $( "#phoneNumber2" ).on('blur', function() {
+        $('#labelPhoneNumber').removeClass('label-top');
+        console.log('blur');
+    });
+
+    $( "#password2" ).on('blur', function() {
+        $('#labelPassword').removeClass('label-top');
+        console.log('blur');
+    });
+
+
+
+
+
+
+
+
 
     var navListItems = $('div.setup-panel div a'),
             allWells = $('.setup-content'),

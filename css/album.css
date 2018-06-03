@@ -542,7 +542,7 @@ footer a{
 .form-control-custom-square{
   height: 80px !important;
   font-size: 36px;
-  line-height: 80px;
+  /*line-height: 80px;*/
   text-align: center;
   border: 1px solid #979797;
   width: 80px;
@@ -628,4 +628,13 @@ footer a{
 
 .mobile-modal-title{
   font-size: 22px;
+}
+
+.label-top{
+  font-size: 80%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+  color:#FACD3E;
+  padding-left: 0;
+  height: 30px;
 }
